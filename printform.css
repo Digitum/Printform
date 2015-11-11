@@ -39,53 +39,63 @@
 		max-width: 129mm;
 	}
 
+	.printform>label
+	{
+		font-size: 1.2em;
+	}
 	.pfSection
 	{
 		margin: 2mm 0mm;
 		page-break-inside: avoid;
 	}
-	.printform>label
-	{
-		font-size: 1.2em;
-	}
 	.pfSection:last-child
 	{
 		margin-bottom: 0mm;
 	}
-	.pfRow
-	{
-		position: relative;
-		display: flex;
-		min-height: 10mm;
-		clear: both;
-	}
-	.pfRow:first-child
+	.pfSection>.pfRow
 	{
 		border-top: solid 0.5mm green;
 		border-left: solid 0.5mm green;
 		border-right: solid 0.5mm green;
-		border-bottom: solid 0.5mm green;
+	}
+	.pfSection>.pfRow:first-child
+	{
 		border-top-left-radius: 2mm;
 		border-top-right-radius: 2mm; 
 	}
-	.pfRow:not(:first-child):not(:last-child)
+	.pfSection>.pfRow:last-child
 	{
-		border-left: solid 0.5mm green;
-		border-right: solid 0.5mm green;
-		border-bottom: solid 0.5mm green;
-	}
-	.pfRow:last-child
-	{
-		border-left: solid 0.5mm green;
-		border-right: solid 0.5mm green;
 		border-bottom: solid 0.5mm green;
 		border-bottom-left-radius: 2mm;
 		border-bottom-right-radius: 2mm;
+	}
+	
+	.pfRow
+	{
+		position: relative;
+		display: flex;
+		min-height: 4mm;
+		clear: both;
+	}
+	.pfRow:first-child
+	{
+/* 		border-top-left-radius: 2mm;
+		border-top-right-radius: 2mm; 
+ */
+	}
+	.pfRow:not(:first-child):not(:last-child)
+	{
+		
+	}
+	.pfRow:last-child
+	{
 	}
 	.pfRow label
 	{
 		
 	}
+	
+	
 	.pfItem
 	{
 		float: left;
@@ -104,6 +114,7 @@
 		border: 0px;
 		font-size: 1.3em;
 		font-family: "Comic Sans MS",sans-serif;
+		margin-bottom: 1mm;
 	}
 	.pfItem>input:valid
 	{
@@ -132,25 +143,42 @@
 
 	.pfCol-1
 	{
-		width: 25%;
+		width: 12.5%;
 	}
 	.pfCol-2
 	{
-		width: 50%;
+		width: 25%;
 	}
 	.pfCol-3
 	{
-		width: 75%;
+		width: 37.5%;
 	}
 	.pfCol-4
 	{
+		width: 50%;
+	}
+	.pfCol-5
+	{
+		width: 62.5%;
+	}
+	.pfCol-6
+	{
+		width: 75%;
+	}
+	.pfCol-7
+	{
+		width: 87.5%;
+	}
+	.pfCol-8
+	{
 		width: 100%;
 	}
-	.pfCol-1,.pfCol-2,.pfCol-3,.pfCol-4
+	.pfCol-1,.pfCol-2,.pfCol-3,.pfCol-4,
+	.pfCol-5,.pfCol-6,.pfCol-7,.pfCol-8
 	{
 		float: left;
 		position: relative;
-		min-height: 10mm;
+		/* min-height: 10mm; */
 		padding: 0mm 2mm;
 		box-sizing: border-box;
 	}

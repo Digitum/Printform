@@ -1,3 +1,4 @@
+- Add support for nested layout.
 - Fix Google Chrome printing bug. Some borders looks wrong when printed.
 - Add support for various input fields, such as checkbox, radio buttons and
   textareas. Selects is unnecessary to support due they cannot be emulated 
