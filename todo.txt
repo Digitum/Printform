@@ -1,0 +1,8 @@
+- Fix Google Chrome printing bug. Some borders looks wrong when printed.
+- Add support for various input fields, such as checkbox, radio buttons and
+  textareas. Selects is unnecessary to support due they cannot be emulated 
+  on paper...
+- Matching buttons support, for online form actions.
+- Investigate use of SASS/LESS support. Have only faint knowledge of those 
+  systems.
+- ... More to come...

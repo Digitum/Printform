@@ -1,0 +1,158 @@
+@page 
+{
+	margin: 5mm 5mm 5mm 20mm;
+	size: auto;
+}
+@media all {
+	hr
+	{
+		border: solid 1mm green;
+	}
+	h1
+	{
+		font-family: sans-serif;
+		font-size: 15pt;
+		font-weight: bolder;
+		color: green;
+	}
+	h2
+	{
+		font-family: sans-serif;
+		font-size: 13pt;
+		font-weight: bolder;
+		color: green;
+	}
+
+	.printform
+	{
+		font-family: sans-serif;
+		font-size: 9pt;
+		color: green;
+		max-width: 210mm;
+	}
+	.printform.pfSizeA4
+	{
+		max-width: 190mm;
+	}
+	.printform.pfSizeA5
+	{
+		max-width: 129mm;
+	}
+
+	.pfSection
+	{
+		margin: 2mm 0mm;
+		page-break-inside: avoid;
+	}
+	.printform>label
+	{
+		font-size: 1.2em;
+	}
+	.pfSection:last-child
+	{
+		margin-bottom: 0mm;
+	}
+	.pfRow
+	{
+		position: relative;
+		display: flex;
+		min-height: 10mm;
+		clear: both;
+	}
+	.pfRow:first-child
+	{
+		border-top: solid 0.5mm green;
+		border-left: solid 0.5mm green;
+		border-right: solid 0.5mm green;
+		border-bottom: solid 0.5mm green;
+		border-top-left-radius: 2mm;
+		border-top-right-radius: 2mm; 
+	}
+	.pfRow:not(:first-child):not(:last-child)
+	{
+		border-left: solid 0.5mm green;
+		border-right: solid 0.5mm green;
+		border-bottom: solid 0.5mm green;
+	}
+	.pfRow:last-child
+	{
+		border-left: solid 0.5mm green;
+		border-right: solid 0.5mm green;
+		border-bottom: solid 0.5mm green;
+		border-bottom-left-radius: 2mm;
+		border-bottom-right-radius: 2mm;
+	}
+	.pfRow label
+	{
+		
+	}
+	.pfItem
+	{
+		float: left;
+		border-left: solid 0.5mm green;
+	}
+	.pfItem:first-child
+	{
+		border-left: none;
+	}
+	.pfItem:last-Child
+	{
+	}
+	.pfItem>input
+	{
+		width: 100%;
+		border: 0px;
+		font-size: 1.3em;
+		font-family: "Comic Sans MS",sans-serif;
+	}
+	.pfItem>input:valid
+	{
+		/* Non working! Find replacement. */
+		background-color: #E6FFC5;
+	}
+	@media print {
+		.pfItem>input:valid
+		{
+			/* Non working! Find replacement. */
+			background-color: transparent;
+		}
+	}
+	.pfItem.blocked
+	{
+		background-color: #CEE8B0;
+	}
+	.pfInfo
+	{
+		border: solid 0.5mm green;
+		border-radius: 2mm;
+		padding: 3mm;
+		background-color: #CEE8B0;
+		
+	}
+
+	.pfCol-1
+	{
+		width: 25%;
+	}
+	.pfCol-2
+	{
+		width: 50%;
+	}
+	.pfCol-3
+	{
+		width: 75%;
+	}
+	.pfCol-4
+	{
+		width: 100%;
+	}
+	.pfCol-1,.pfCol-2,.pfCol-3,.pfCol-4
+	{
+		float: left;
+		position: relative;
+		min-height: 10mm;
+		padding: 0mm 2mm;
+		box-sizing: border-box;
+	}
+}
+
