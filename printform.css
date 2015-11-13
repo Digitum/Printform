@@ -121,13 +121,6 @@
 		/* Non working! Find replacement. */
 		background-color: #E6FFC5;
 	}
-	@media print {
-		.pfItem>input:valid
-		{
-			/* Non working! Find replacement. */
-			background-color: transparent;
-		}
-	}
 	.pfItem.blocked
 	{
 		background-color: #CEE8B0;
@@ -182,5 +175,23 @@
 		padding: 0mm 2mm;
 		box-sizing: border-box;
 	}
+	
+	.pfItem input[type=checkbox]
+	{
+		border: solid 3px red;
+		
+	}
 }
-
+@media print {
+	.printform .pageBreak
+	{
+		page-break-before: always;
+	}
+	.pfItem>input:valid
+	{
+		/* Non working! Find replacement. */
+		background-color: transparent;
+	}
+}
+@media screen {
+}
